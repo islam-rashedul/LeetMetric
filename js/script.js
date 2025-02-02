@@ -11,6 +11,19 @@ document.addEventListener("DOMContentLoaded", function(){
     const hardProgressCircle = document.querySelector(".hard-progress");
     const cardStatsContainer = document.querySelector(".stats-cards");
 
+    function validateUsername(username){
+        if(username.trim()===""){
+            alert("Username should not be empty");
+        }
+
+        const regex = /^[a-zA-Z][a-zA-Z0-9_]{3,15}$/;
+        const isMatching = regex.test(username);
+        if(!isMatching){
+            alert("Invalid Username");
+        }
+        return isMatching;
+    }
+
     searchButton.addEventListener('click', function(){
         const username = userNameInput.value;
         console.log(username);
