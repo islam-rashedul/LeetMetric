@@ -21,3 +21,10 @@ body{
     align-items: center;
     background: conic-gradient(green var(--progress-degree, 0%), salmon 0%);
 }
+
+.progress{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    flex-wrap: wrap;
+}
